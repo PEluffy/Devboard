@@ -1,0 +1,24 @@
+.input {
+  border: none;
+  background-color: #d6d6d6;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  background-color: #d6d6d6;
+  border-radius: 15px;
+  gap: 8px;
+  border: solid #b0b0b0 2px;
+  padding: 4px;
+  margin-bottom: 1.5rem;
+}
+.command {
+  color: #282828;
+  display: flex;
+  align-items: center;
+  border: solid #b0b0b0 2px;
+  background-color: #e6e6e6;
+  border-radius: 8px;
+  padding: 5px;
+}
