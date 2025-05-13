@@ -5,23 +5,4 @@
   margin-bottom: 15rem;
 }
 
-.itemscontainerEach {
-  gap: 1rem;
-  display: flex;
-  align-items: center;
-}
 /* link visited active hover*/
-.link:link,
-.link:visited {
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-}
-
-.active {
-  background-color: rgb(247, 247, 247);
-  font-weight: 600;
-  border-radius: 15px;
-
-  box-shadow: inset 0 0 0 0 2px #b5b5b5;
-}

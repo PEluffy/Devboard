@@ -1,71 +1,37 @@
 import styles from "../../css/SbBody.module.css";
-import { LayoutDashboard } from "lucide-react";
-import { Bookmark } from "lucide-react";
-import { NotebookPen } from "lucide-react";
-import { Github } from "lucide-react";
-import { Link, NavLink } from "react-router";
+import { LayoutDashboard, Bookmark, NotebookPen, Github } from "lucide-react";
+import { NavLink } from "react-router-dom";
+import navLinkStyles from "../../css/NavLink.module.css";
+
+const navItems = [
+  { to: "/Dashboard", label: "Dashboard", Icon: LayoutDashboard },
+  { to: "/bookmark", label: "Bookmark", Icon: Bookmark },
+  { to: "/Note", label: "Note", Icon: NotebookPen },
+  { to: "/github", label: "Github", Icon: Github },
+];
 
 function SbBody() {
   return (
     <div className={styles.body}>
-      <div>
-        {" "}
-        <NavLink
-          to="/Dashboard"
-          className={({ isActive }) =>
-            `${styles.itemscontainerEach} ${styles.link} ${
-              isActive ? styles.active : ""
-            }`
-          }
-        >
-          {" "}
-          <LayoutDashboard color="grey" />
-          Dashboard
-        </NavLink>
-      </div>
-      <div>
-        {" "}
-        <NavLink
-          to="/bookmark"
-          className={({ isActive }) =>
-            `${styles.itemscontainerEach} ${styles.link} ${
-              isActive ? styles.active : ""
-            }`
-          }
-        >
-          {" "}
-          <Bookmark color="grey" />
-          Bookmark
-        </NavLink>
-      </div>
-      <div>
-        <NavLink
-          to="/Note"
-          className={({ isActive }) =>
-            `${styles.itemscontainerEach} ${styles.link} ${
-              isActive ? styles.active : ""
-            }`
-          }
-        >
-          {" "}
-          <NotebookPen color="grey" />
-          Note
-        </NavLink>
-      </div>
-      <div>
-        <NavLink
-          to="/github"
-          className={({ isActive }) =>
-            `${styles.itemscontainerEach} ${styles.link} ${
-              isActive ? styles.active : ""
-            }`
-          }
-        >
-          {" "}
-          <Github color="grey" />
-          Github
-        </NavLink>
-      </div>
+      {navItems.map(({ to, label, Icon }) => (
+        <div key={to}>
+          <NavLink
+            to={to}
+            className={({ isActive }) =>
+              `${navLinkStyles.itemscontainerEach} ${navLinkStyles.link} ${
+                isActive ? navLinkStyles.active : ""
+              }`
+            }
+          >
+            {({ isActive }) => (
+              <>
+                <Icon color={isActive ? "black" : "grey"} />
+                {label}
+              </>
+            )}
+          </NavLink>
+        </div>
+      ))}
     </div>
   );
 }
