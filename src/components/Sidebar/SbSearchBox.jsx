@@ -10,7 +10,8 @@ function SbSearchBox() {
         placeholder="Search..."
         className={styles.input}
         size="10"
-      ></input>
+        type="text"
+      />
       <div className={styles.command}>
         <Command size={16} strokeWidth={1} />F
       </div>

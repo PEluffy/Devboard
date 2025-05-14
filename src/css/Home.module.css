@@ -1,5 +1,16 @@
 .home {
   display: grid;
-  grid-template-columns: 1fr 8fr;
+  /* grid-template-columns: 1fr 8fr; */
+  grid-template-columns: 220px 1fr;
   height: 100vh;
+  /* transition: width 2s;*/
+  transition: all 0.3s;
+}
+.homeClosed {
+  display: grid;
+  /* grid-template-columns: 0.1fr 8fr; */
+  grid-template-columns: 105px 1fr;
+  height: 100vh;
+  transition: all 0.3s;
+  /* transition-delay: 0.1s; */
 }

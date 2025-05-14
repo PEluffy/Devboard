@@ -6,7 +6,7 @@
 }
 
 .active {
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(255, 255, 255);
   font-weight: 600;
   border-radius: 15px;
   box-shadow: inset 0 0 0 2px #c3c3c3;

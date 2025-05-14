@@ -4,12 +4,14 @@ import SbBody from "./Sidebar/SbBody";
 import SbFooter from "./Sidebar/SbFooter";
 import SbLogoSection from "./Sidebar/SbLogoSection";
 import SbSearchBox from "./Sidebar/SbSearchBox";
-
+import { useContext } from "react";
+import { SidebarContext } from "../context/SideBarcontext";
 function Sidebar() {
+  const { isOpen } = useContext(SidebarContext);
   return (
     <div className={styles.sidebar}>
       <SbLogoSection />
-      <SbSearchBox />
+      {isOpen && <SbSearchBox />}
       <SbBody />
       <SbFooter />
     </div>

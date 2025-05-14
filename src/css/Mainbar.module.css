@@ -1,1 +1,8 @@
-
+.mainbar {
+  position: relative;
+  padding: 0.8rem;
+  box-shadow: inset 0 0 0 2px rgb(209, 209, 209);
+  margin: 0.8rem;
+  border-radius: 0.8rem;
+  background-color: #ffffff;
+}
